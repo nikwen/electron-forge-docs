@@ -102,6 +102,39 @@ if (require('electron-squirrel-startup')) app.quit();
 ```
 {% endcode %}
 
+### Spaces in the app name
+
+Squirrel.Windows has bugs when the executable name contains spaces (e.g. [#713](https://github.com/Squirrel/Squirrel.Windows/issues/713)). The following is a configuration that works well even if your app name contains spaces:
+
+{% code title="package.json" %}
+```json5
+{
+  // Hyphenated version
+  "name": "app-name",
+  // The app name with spaces (will be shown to your users)
+  "productName": "App Name",
+  // ...
+}
+```
+{% endcode %}
+
+{% code title="forge.config.ts" %}
+```typescript
+const config: ForgeConfig = {
+  makers: [
+    new MakerSquirrel({
+      // CamelCase version
+      name: "AppName",
+      // ...
+    }),
+  ],
+  // ...
+}
+```
+{% endcode %}
+
+Alternatively, instead of using CamelCase in the `MakerSquirrel` config, you could also use the hyphenated version `app-name` (as [Electron Fiddle](https://github.com/electron/fiddle) does).
+
 ## Debugging
 
 For advanced debug logging for this maker, add the `DEBUG=electron-windows-installer*` environment variable.
