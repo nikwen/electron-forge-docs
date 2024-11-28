@@ -133,6 +133,14 @@ const config: ForgeConfig = {
 ```
 {% endcode %}
 
+Additionally, you'll need to set the App User Model ID from your main process like this:
+
+{% code title="main.ts" %}
+```typescript
+app.setAppUserModelId("com.squirrel.AppName.AppName");
+```
+{% endcode %}
+
 Squirrel.Windows will use the `productName` from your `package.json` for any user-facing strings and for the name of your `Setup.exe`.
 
 It will use the camel-cased `name` from the `MakerSquirrel` config for the NuGet package name. NuGet package names cannot contain spaces.
