@@ -104,7 +104,7 @@ if (require('electron-squirrel-startup')) app.quit();
 
 ### Spaces in the app name
 
-Squirrel.Windows has bugs when the executable name contains spaces (e.g. [#713](https://github.com/Squirrel/Squirrel.Windows/issues/713)). The following is a configuration that works well even if your app name contains spaces:
+Squirrel.Windows has bugs when certain identifiers contain spaces (e.g. [#713](https://github.com/Squirrel/Squirrel.Windows/issues/713)). The following is a configuration that works well even if your app name contains spaces:
 
 {% code title="package.json" %}
 ```json5
