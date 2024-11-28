@@ -133,8 +133,6 @@ const config: ForgeConfig = {
 ```
 {% endcode %}
 
-Alternatively, instead of using CamelCase in the `MakerSquirrel` config, you could also use the hyphenated version `app-name` (as [Electron Fiddle](https://github.com/electron/fiddle) does).
-
 ## Debugging
 
 For advanced debug logging for this maker, add the `DEBUG=electron-windows-installer*` environment variable.
