@@ -173,6 +173,7 @@ const config: ForgeConfig = {
 
 #### Updating your npm scripts
 
+<!-- markdownlint-disable-next-line MD038 -->
 When you call scripts such as `electron-forge make` or `electron-forge publish`, you will now have to prefix them with `dotenv -e .env.trustedsigning -- `. This loads the environment variables from the `.env.trustedsigning` file.
 
 For example, your npm scripts in your `package.json` might then look like this:
