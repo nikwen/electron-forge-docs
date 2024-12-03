@@ -65,13 +65,13 @@ module.exports = {
 
 As of November 2024, Azure Trusted Signing is available to organizations with 3+ years of verifiable business history and to individuals. Microsoft is [looking to make the program available](https://github.com/Azure/trusted-signing-action/issues/42#issuecomment-2488402061) to organizations with a shorter history, too. If you're reading this at a later point, it could make sense to check.
 
-### Prerequisites
+### Prerequisites <a href="#prerequisites-trusted-signing" id="prerequisites-trusted-signing"></a>
 
 First, create an Azure account and set up Azure Trusted Signing in your account as described [here](https://melatonin.dev/blog/code-signing-on-windows-with-azure-trusted-signing/).
 
 Then install the dependencies for local code signing as described [here](https://melatonin.dev/blog/code-signing-on-windows-with-azure-trusted-signing/#step-8-signing-locally). Also create the required `metadata.json` file in an arbitrary location on your computer.
 
-### Configuring Electron Forge
+### Configuring Electron Forge <a href="#configuring-forge-trusted-signing" id="configuring-forge-trusted-signing"></a>
 
 #### Installing npm dependencies
 
